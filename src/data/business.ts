@@ -1,0 +1,21 @@
+export const BUSINESS = {
+  name: "Sigma Aircons",
+  phone: "+91 84016 02049",
+  phoneRaw: "+918401602049",
+  email: "sigmaaircons.business84016@gmail.com",
+  address: "GF B-27, Shalin Complex, beside Dtdc Courier, near Bank Of India, Kapdwanj, Manjalpur, Vadodara - 390011",
+  city: "Vadodara",
+  state: "Gujarat",
+  country: "India",
+  postalCode: "390011",
+  hours: "24 Hours",
+  whatsappLink: "https://wa.me/918401602049?text=Hi%20Sigma%20Aircons%2C%20I%20need%20AC%20service.",
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.5!2d73.18!3d22.28!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSigma+Aircons!5e0!3m2!1sen!2sin!4v1700000000000",
+  siteUrl: "https://sigmaaircons.in",
+  geo: {
+    latitude: "22.2827",
+    longitude: "73.1874",
+    region: "IN-GJ",
+    placename: "Vadodara",
+  },
+} as const;
