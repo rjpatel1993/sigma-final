@@ -52,12 +52,12 @@ const ServiceDetail = () => {
       />
 
       <section className="section-padding">
-        <div className="container-wide">
+        <div className="container-wide text-center">
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Services", to: "/services/" }, { label: service.name }]} />
 
-          <div className="max-w-4xl">
+          <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl lg:text-4xl font-bold mb-4">{service.name} in Vadodara</h1>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">{service.description}</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-3xl mx-auto">{service.description}</p>
 
             <Button asChild size="lg" className="mb-14 shadow-lg shadow-primary/25">
               <a href={`tel:${BUSINESS.phoneRaw}`}><Phone className="h-5 w-5 mr-2" /> Call Now for {service.name}</a>

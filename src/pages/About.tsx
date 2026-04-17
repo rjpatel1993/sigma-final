@@ -22,10 +22,10 @@ const About = () => {
         }]}
       />
       <section className="section-padding">
-        <div className="container-wide">
+        <div className="container-wide text-center">
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "About Us" }]} />
 
-          <div className="max-w-4xl">
+          <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl lg:text-4xl font-bold mb-6">About Sigma Aircons</h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
               Sigma Aircons is Vadodara's trusted air conditioning service provider, dedicated to keeping homes and businesses cool and comfortable. With years of experience in the HVAC industry, we have built a reputation for reliability, quality workmanship, and exceptional customer service.

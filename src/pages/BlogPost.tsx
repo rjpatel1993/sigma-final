@@ -29,14 +29,14 @@ const BlogPost = () => {
         }]}
       />
       <article className="section-padding">
-        <div className="container-wide max-w-3xl">
+        <div className="container-wide max-w-3xl text-center">
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Blog", to: "/blog/" }, { label: post.title }]} />
           <h1 className="text-3xl lg:text-4xl font-bold mb-4">{post.title}</h1>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground mb-10 pb-6 border-b border-border/60">
+          <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground mb-10 pb-6 border-b border-border/60">
             <span className="flex items-center gap-1.5"><Calendar className="h-4 w-4 text-primary" /> {new Date(post.date).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}</span>
             <span className="flex items-center gap-1.5"><Clock className="h-4 w-4 text-primary" /> {post.readTime}</span>
           </div>
-          <div className="prose prose-invert max-w-none text-muted-foreground [&_h2]:text-foreground [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:mb-4 [&_p]:leading-relaxed [&_ul]:mb-4 [&_li]:mb-1 [&_strong]:text-foreground">
+          <div className="prose max-w-none text-left text-muted-foreground [&_h2]:text-foreground [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:mb-4 [&_p]:leading-relaxed [&_ul]:mb-4 [&_li]:mb-1 [&_strong]:text-foreground">
             {post.content.split('\n').map((line, i) => {
               const trimmed = line.trim();
               if (!trimmed) return null;

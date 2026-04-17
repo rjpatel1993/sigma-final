@@ -37,11 +37,11 @@ const Services = () => {
         schemas={[breadcrumbSchema]}
       />
       <section className="section-padding">
-        <div className="container-wide">
+        <div className="container-wide text-center">
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Services" }]} />
           <h1 className="text-3xl lg:text-4xl font-bold mb-3">Our AC Services in Vadodara</h1>
-          <p className="text-muted-foreground max-w-2xl mb-10">From AC repair and maintenance to installation and commercial solutions — we've got all your air conditioning needs covered.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-10">From AC repair and maintenance to installation and commercial solutions — we've got all your air conditioning needs covered.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 text-left">
             {SERVICES.map((s) => (
               <Link key={s.slug} to={`/service/${s.slug}/`} className="group">
                 <Card className="bg-card border-border/60 hover:border-primary/40 transition-all duration-300 h-full group-hover:shadow-lg group-hover:shadow-primary/5">
