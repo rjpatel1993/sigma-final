@@ -10,7 +10,8 @@ export const BUSINESS = {
   postalCode: "390011",
   hours: "24 Hours",
   whatsappLink: "https://wa.me/918401602049?text=Hi%20Sigma%20Aircons%2C%20I%20need%20AC%20service.",
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.5!2d73.18!3d22.28!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSigma+Aircons!5e0!3m2!1sen!2sin!4v1700000000000",
+  mapEmbedUrl: "https://www.google.com/maps?q=Sigma+Aircons+Manjalpur+Vadodara&output=embed",
+  googleReviewLink: "https://share.google/GBjF7mrKkveyy90In",
   siteUrl: "https://sigmaaircons.in",
   geo: {
     latitude: "22.2827",
