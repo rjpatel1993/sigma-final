@@ -8,7 +8,7 @@ import Layout from "@/components/Layout";
 import { BUSINESS } from "@/data/business";
 import { SERVICES } from "@/data/services";
 import { AREAS } from "@/data/areas";
-import { TESTIMONIALS } from "@/data/testimonials";
+
 
 const SERVICE_ICONS: Record<string, React.ReactNode> = {
   Wrench: <Wrench className="h-7 w-7" />,
@@ -172,32 +172,6 @@ const Index = () => {
               >
                 {a.name}
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="section-padding">
-        <div className="container-wide">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-3">What Our Customers Say</h2>
-            <p className="text-muted-foreground">Real reviews from real Vadodara residents.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {TESTIMONIALS.map((t, i) => (
-              <Card key={i} className="bg-card border-border/60">
-                <CardContent className="p-6">
-                  <div className="flex gap-0.5 text-amber-400 mb-4">
-                    {Array(t.rating).fill(null).map((_, j) => <Star key={j} className="h-4 w-4 fill-current" />)}
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-5 leading-relaxed">"{t.text}"</p>
-                  <div className="border-t border-border/60 pt-4">
-                    <p className="text-sm font-semibold">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">{t.location}, Vadodara</p>
-                  </div>
-                </CardContent>
-              </Card>
             ))}
           </div>
         </div>
