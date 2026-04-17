@@ -8,8 +8,8 @@ interface BreadcrumbItem {
 
 const Breadcrumbs = ({ items }: { items: BreadcrumbItem[] }) => {
   return (
-    <nav aria-label="Breadcrumb" className="mb-6">
-      <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
+    <nav aria-label="Breadcrumb" className="mb-6 flex justify-center">
+      <ol className="flex flex-wrap items-center justify-center gap-1.5 text-sm text-muted-foreground">
         {items.map((item, i) => (
           <li key={i} className="flex items-center gap-1.5">
             {i > 0 && <ChevronRight className="h-3.5 w-3.5 opacity-50" />}

@@ -22,13 +22,13 @@ const Contact = () => {
         }]}
       />
       <section className="section-padding">
-        <div className="container-wide">
+        <div className="container-wide text-center">
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Contact" }]} />
 
           <h1 className="text-3xl lg:text-4xl font-bold mb-3">Contact Us</h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mb-10">Have an AC problem? Get in touch with Sigma Aircons for quick, reliable service in Vadodara.</p>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">Have an AC problem? Get in touch with Sigma Aircons for quick, reliable service in Vadodara.</p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
             {/* Contact info */}
             <div>
               <h2 className="text-xl font-bold mb-6">Get in Touch</h2>

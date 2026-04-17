@@ -24,11 +24,11 @@ const Areas = () => {
         }]}
       />
       <section className="section-padding">
-        <div className="container-wide">
+        <div className="container-wide text-center">
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Service Areas" }]} />
           <h1 className="text-3xl lg:text-4xl font-bold mb-3">AC Service Areas in Vadodara</h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mb-10">We provide doorstep AC services across all these Vadodara localities. Select an area to find services available near you.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">We provide doorstep AC services across all these Vadodara localities. Select an area to find services available near you.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 text-left">
             {AREAS.map((a) => (
               <Card key={a.slug} className="bg-card border-border/60 hover:border-primary/40 transition-all">
                 <CardContent className="p-6">

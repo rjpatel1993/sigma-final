@@ -29,10 +29,10 @@ const BlogPost = () => {
         }]}
       />
       <article className="section-padding">
-        <div className="container-wide max-w-3xl">
+        <div className="container-wide max-w-3xl text-center">
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Blog", to: "/blog/" }, { label: post.title }]} />
           <h1 className="text-3xl lg:text-4xl font-bold mb-4">{post.title}</h1>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground mb-10 pb-6 border-b border-border/60">
+          <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground mb-10 pb-6 border-b border-border/60">
             <span className="flex items-center gap-1.5"><Calendar className="h-4 w-4 text-primary" /> {new Date(post.date).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}</span>
             <span className="flex items-center gap-1.5"><Clock className="h-4 w-4 text-primary" /> {post.readTime}</span>
           </div>

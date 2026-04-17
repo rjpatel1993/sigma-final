@@ -23,11 +23,11 @@ const Blog = () => {
         }]}
       />
       <section className="section-padding">
-        <div className="container-wide">
+        <div className="container-wide text-center">
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Blog" }]} />
           <h1 className="text-3xl lg:text-4xl font-bold mb-3">AC Tips & Guides</h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mb-10">Expert advice on AC maintenance, buying guides, and energy-saving tips for Vadodara residents.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">Expert advice on AC maintenance, buying guides, and energy-saving tips for Vadodara residents.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 text-left">
             {BLOG_POSTS.map((post) => (
               <Link key={post.slug} to={`/blog/${post.slug}/`} className="group">
                 <Card className="bg-card border-border/60 hover:border-primary/40 transition-all duration-300 h-full group-hover:shadow-lg group-hover:shadow-primary/5">
