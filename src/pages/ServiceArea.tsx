@@ -7,7 +7,7 @@ import Layout from "@/components/Layout";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getServiceBySlug, SERVICES } from "@/data/services";
 import { getAreaBySlug } from "@/data/areas";
-import { generateAreaFaqs } from "@/data/areaFaqs";
+import { generateAreaContent } from "@/data/areaFaqs";
 import { BUSINESS } from "@/data/business";
 
 const ServiceArea = () => {
@@ -16,7 +16,7 @@ const ServiceArea = () => {
   const area = getAreaBySlug(areaSlug || "");
   if (!service || !area) return <Navigate to="/services/" replace />;
 
-  const areaFaqs = generateAreaFaqs(service.name, area.name);
+  const { intro, localContext, faqs: areaFaqs } = generateAreaContent(service.name, area.name);
 
   const schemas = [
     {
@@ -69,10 +69,9 @@ const ServiceArea = () => {
             <h1 className="text-3xl lg:text-4xl font-bold mb-4">
               {service.name} in {area.name}, Vadodara
             </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4 max-w-3xl mx-auto">
-              Looking for reliable {service.name.toLowerCase()} service in {area.name}, Vadodara? {BUSINESS.name} provides professional, affordable, and quick AC services at your doorstep in {area.name} and nearby areas.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">{area.description}</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4 max-w-3xl mx-auto">{intro}</p>
+            <p className="text-muted-foreground leading-relaxed mb-4 max-w-3xl mx-auto">{area.description}</p>
+            <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">{localContext}</p>
 
             <Button asChild size="lg" className="mb-14 shadow-lg shadow-primary/25">
               <a href={`tel:${BUSINESS.phoneRaw}`}><Phone className="h-5 w-5 mr-2" /> Call for {service.name} in {area.name}</a>
