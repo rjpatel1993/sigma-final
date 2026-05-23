@@ -2,79 +2,113 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===== Sigma Aircons — Trust Navy palette =====
+   Locked tokens: navy #0B1E3F, blue #1E40AF, white #F8FAFC, slate #334155
+   All values stored as HSL.
+*/
+
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 200 25% 12%;
+    --foreground: 215 39% 15%;
 
-    --card: 190 40% 98%;
-    --card-foreground: 200 25% 12%;
+    --card: 210 40% 98%;
+    --card-foreground: 215 39% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 25% 12%;
+    --popover-foreground: 215 39% 15%;
 
-    --primary: 184 85% 36%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary = Trust navy */
+    --primary: 218 71% 15%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 190 40% 96%;
-    --secondary-foreground: 200 25% 12%;
-
-    --muted: 190 30% 95%;
-    --muted-foreground: 200 12% 42%;
-
-    --accent: 184 75% 45%;
+    /* Accent = action blue */
+    --accent: 224 76% 40%;
     --accent-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 39% 15%;
+
+    --muted: 210 30% 95%;
+    --muted-foreground: 215 16% 35%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 190 25% 88%;
-    --input: 190 25% 88%;
-    --ring: 184 85% 36%;
+    --border: 215 25% 90%;
+    --input: 215 25% 90%;
+    --ring: 224 76% 40%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
+
+    --success: 152 65% 38%;
 
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 200 25% 12%;
-    --sidebar-primary: 184 85% 36%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 190 40% 96%;
-    --sidebar-accent-foreground: 200 25% 12%;
-    --sidebar-border: 190 25% 88%;
-    --sidebar-ring: 184 85% 36%;
+    --sidebar-foreground: 215 39% 15%;
+    --sidebar-primary: 218 71% 15%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 215 39% 15%;
+    --sidebar-border: 215 25% 90%;
+    --sidebar-ring: 224 76% 40%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+  * { @apply border-border; }
+
+  html { -webkit-tap-highlight-color: transparent; }
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'ss01', 'cv11';
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', 'Manrope', system-ui, sans-serif;
     @apply font-bold tracking-tight text-foreground;
+    letter-spacing: -0.02em;
+  }
+
+  h1 { letter-spacing: -0.035em; }
+
+  /* Safe area for sticky mobile call bar */
+  @media (max-width: 767px) {
+    body { padding-bottom: 64px; }
   }
 }
 
 @layer utilities {
   .container-wide {
     @apply mx-auto w-full px-4 sm:px-6 lg:px-8;
-    max-width: 1536px;
+    max-width: 1280px;
   }
 
-  .section-padding {
-    @apply py-16 lg:py-20;
-  }
+  .section-padding { @apply py-14 lg:py-24; }
 
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(184 85% 36%) 0%, hsl(190 90% 28%) 100%);
+    background: linear-gradient(135deg, hsl(218 71% 15%) 0%, hsl(224 76% 30%) 100%);
   }
 
-  .gradient-card {
-    background: linear-gradient(180deg, hsl(190 40% 99%) 0%, hsl(190 40% 96%) 100%);
+  .gradient-soft {
+    background: radial-gradient(1200px 600px at 10% -10%, hsl(224 90% 96%) 0%, transparent 60%),
+                radial-gradient(900px 500px at 100% 0%, hsl(210 100% 97%) 0%, transparent 55%);
+  }
+
+  .shadow-ring {
+    box-shadow: 0 1px 0 hsl(215 30% 90%), 0 10px 30px -12px hsl(218 71% 15% / 0.12);
+  }
+
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Subtle hairline grid for hero */
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(215 25% 92%) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(215 25% 92%) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
   }
 }
